@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&family=VT323&display=swap');
+*{
+    /*box-sizing: border-box;
+    font-family: 'Montserrat', bold; 
+    margin: 0;
+    padding: 0;*/
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif; 
+    margin: 0;
+    padding: 0;
+}  
+.body{
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1775952378/YOTcx_d_cpxmye.webp");
+    background-size: cover;
+    background-position: center;
+    
+}
+.titulo{
+  position:absolute;
+  z-index: 1;
+  right: 40%;
+  margin-top: 25px;
+  font-size: 55px;
+  width: 310px;
+  color: black;
+  text-shadow: 2px 2px 0 palevioletred;
+  background-color: rgba(255, 255, 255, 0.479);
+  border-radius: 15px;
+} 
+.caja{
+    border: solid 10px rgb(0, 0, 0) ;
+    width: 40%;
+    height: 400px;
+    position: relative;
+    top: 110px;
+    left: 395px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1759324708/19b3f94268d09d0e5cc8d75ae69e2e22_q3m5kj.jpg");
+}
+.paAtras{
+    color: skyblue;
+    font-size: 40px;
+
+}
+.paAtras:hover{
+    /*background-color: aquamarine;
+    color: black;
+    box-shadow: 0 8px 16px yellow, 0 6px 20px 0 yellow;*/
+    cursor: pointer;
+}
+.again{
+    color: aqua;
+    font-size: 40px;
+    position: relative;
+    left: 415px;
+    cursor: pointer;
+}
+.juego{
+    display: flex;
+    flex-direction: column;
+}
+.introdLetra{
+    display: flex;
+    flex-direction: row;
+}
+.introdLetra1{
+    font-size: 25px;
+    color: yellow;
+}
+.introdLetra2{
+    width: 35px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.botonVerif{
+    width: 250px;
+    background-color: blueviolet;
+    border-color: yellow;
+    color: yellow;
+    cursor: pointer;
+}
+.botonVerif:hover{
+    box-shadow: 0 2px 2px yellow, 0 2px 2px 0 yellow;
+}
+.imgAhorcado1{
+    width: 300px;
+    height: 235px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1776121271/ahorcado1_y6muup.png");
+    background-size: cover;
+    flex-shrink: 0;
+}
+.imgAhorcado2{
+    width: 300px;
+    height: 235px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1776121590/ahorcado2_fwjd5q.png");
+    background-size: cover;
+    flex-shrink: 0;
+}
+.imgAhorcado3{
+    width: 300px;
+    height: 235px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1776121589/ahorcado3_wao9qe.png");
+    background-size: cover;
+    flex-shrink: 0;
+}
+.imgAhorcado4{
+    width: 300px;
+    height: 235px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1776121589/ahorcado4_rejttw.jpg");
+    background-size: cover;
+    flex-shrink: 0;
+}
+.imgAhorcado5{
+    width: 300px;
+    height: 235px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1776121589/ahorcado5_pe4nnl.jpg");
+    background-size: cover;
+    flex-shrink: 0;
+}
+.imgAhorcado6{
+    width: 300px;
+    height: 235px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1776282901/ahorcado6_b3yknp.jpg");
+    background-size: cover;
+    flex-shrink: 0;
+}
+.imgAhorcado7{
+    width: 300px;
+    height: 235px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1776121589/ahorcado7_fcgudt.jpg");
+    background-size: cover;
+    flex-shrink: 0;
+}
+.resto{
+    margin-left:10px;
+    color: yellow;
+}
+.seccionDicifil{
+    display: flex;
+    flex-direction: row;
+}
+.seccionAunMasDicifil{
+    display: flex;
+    flex-direction: column;
+}
+.resultado{
+    margin-top:40px;
+    color:aqua;
+}

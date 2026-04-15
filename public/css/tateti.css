@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&family=VT323&display=swap');
+*{
+    /*box-sizing: border-box;
+    font-family: 'Montserrat', bold; 
+    margin: 0;
+    padding: 0;*/
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif; 
+    margin: 0;
+    padding: 0;
+}  
+.body{
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1775952496/dae649267c07dd89b651703722a10b66_pna6iv.jpg");
+    background-size: cover;
+    
+    
+}
+.titulo{
+  position:absolute;
+  z-index: 1;
+  right: 42%;
+  margin-top: 25px;
+  font-size: 55px;
+  width: 230px;
+  color: black;
+  text-shadow: 2px 2px 0 palevioletred;
+  background-color: rgba(255, 255, 255, 0.479);
+  border-radius: 15px;
+} 
+.caja{
+    border: solid 10px rgb(0, 0, 0) ;
+    width: 40%;
+    height: 400px;
+    position: relative;
+    top: 110px;
+    left: 395px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1759324708/19b3f94268d09d0e5cc8d75ae69e2e22_q3m5kj.jpg");
+}
+.paAtras{
+    color: aqua;
+    font-size: 40px;
+    cursor: pointer;
+}
+.again{
+    color: aqua;
+    font-size: 40px;
+    position: relative;
+    left: 415px;
+    cursor: pointer;
+}
+.cuadros{
+    margin-left: 125px;
+    width: 276px;
+    text-align: center;
+}
+.cell{
+    height: 90px;
+    width: 90px;
+    border: solid 2px aqua;
+    color:aqua;
+    display: grid;
+    place-items: center;
+    float: left;
+    font-size: 50px;
+    cursor: pointer;
+}
+.results{
+    position: relative;
+    color: yellow;
+    top:10px;
+    height: 1rem;
+}
