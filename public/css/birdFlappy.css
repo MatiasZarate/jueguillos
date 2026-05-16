@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&family=VT323&display=swap');
+*{
+    /*box-sizing: border-box;
+    font-family: 'Montserrat', bold; 
+    margin: 0;
+    padding: 0;*/
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif; 
+    margin: 0;
+    padding: 0;
+}  
+.body{
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/v1775948171/CtE6G_d_xyb1qe.webp");
+    background-size: cover;
+    background-position: top;
+}
+.titulo{
+  position:absolute;
+  z-index: 1;
+  left: 1%;
+  margin-top: 25px;
+  font-size: 55px;
+  width: 358px;
+  color: black;
+  text-shadow: 2px 2px 0 palevioletred;
+  background-color: rgba(255, 255, 255, 0.479);
+  border-radius: 15px;
+} 
+.caja{
+    border: solid 10px rgb(0, 0, 0) ;
+    width: 44%;
+    height: 607px;
+    position: relative;
+    left: 415px;
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1759324708/19b3f94268d09d0e5cc8d75ae69e2e22_q3m5kj.jpg");
+    display: flex;
+    flex-direction: row;
+}
+.paAtras{
+    color: aqua;
+    font-size: 40px;
+    cursor: pointer;
+    height: 50px;
+}
+.again{
+    color: aqua;
+    font-size: 40px;
+    position: relative;
+    left: 415px;
+    cursor: pointer;
+}
+.nogame{
+    position: relative;
+    /*left: 10px;*/
+    color: yellow;
+    /*top: 50px;*/
+    width: 110px;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    overflow: auto;
+    
+}
+.game{
+    position: absolute;
+    margin-left: 125px;
+    left: 80px;
+}
+.fondo{
+    height: 470px;
+}
+#board{
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/v1778767646/flappybirdbg_bbfkld.png");
+}

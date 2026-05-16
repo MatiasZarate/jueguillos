@@ -9,6 +9,9 @@ const controlador= {
     },
     tateti: (req,res)=>{
         res.render("tateti")
+    },
+    birdFlappy: (req, res)=>{
+        res.render("birdFlappy")
     }
 }
 
