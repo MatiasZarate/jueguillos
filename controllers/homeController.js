@@ -12,6 +12,9 @@ const controlador= {
     },
     birdFlappy: (req, res)=>{
         res.render("birdFlappy")
+    },
+    killSlenderman: (req, res)=>{
+        res.render("killSlenderman")
     }
 }
 

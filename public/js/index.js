@@ -3,6 +3,7 @@ window.addEventListener("load", function(){
    let ahorcado = document.getElementById('ahorcado');
    let tateti = document.getElementById('tateti');
    let birdFlappy = document.getElementById('birdFlappy');
+   let killSlenderman = document.getElementById('killSlenderman');
 
    ahorcado.addEventListener("click", () => {
         window.location.href = "/ahorcado";
@@ -12,5 +13,8 @@ window.addEventListener("load", function(){
     })
     birdFlappy.addEventListener("click", () => {
         window.location.href = "/birdFlappy";
+    })
+    killSlenderman.addEventListener("click", () => {
+        window.location.href = "/killSlenderman";
     })
 })

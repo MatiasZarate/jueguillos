@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&family=VT323&display=swap');
+*{
+    /*box-sizing: border-box;
+    font-family: 'Montserrat', bold; 
+    margin: 0;
+    padding: 0;*/
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif; 
+    margin: 0;
+    padding: 0;
+}  
+.body{
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/v1780008125/warning_ubkscz.jpg");
+    background-size: cover;
+}
+.titulo{
+  position:absolute;
+  z-index: 1;
+  right: 37%;
+  margin-top: 25px;
+  font-size: 55px;
+  width: 370px;
+  color: black;
+  text-shadow: 2px 2px 0 palevioletred;
+  background-color: rgba(255, 255, 255, 0.479);
+  border-radius: 15px;
+} 
+.caja{
+    border: solid 10px rgb(0, 0, 0) ;
+    width: 75%;
+    height: 490px;
+    left: 145px;
+    position: relative;
+    top: 110px;
+    
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/q_auto/f_auto/v1759324708/19b3f94268d09d0e5cc8d75ae69e2e22_q3m5kj.jpg");
+}
+.elementosSuperiores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1000px;
+}
+.paAtras{
+    color: aqua;
+    font-size: 40px;
+    cursor: pointer;
+}
+#puntuacion{
+    color: red;
+    left: 500px;
+    text-shadow:   1px 1px 0px #000000,
+    2px 2px 0px #000000,
+    3px 3px 0px #000000,
+    4px 4px 0px #000000,
+    5px 5px 0px #000000, /*red,*/
+    6px 6px 10px /*rgba(0, 0, 0, 0.5);*/red;
+}
+.again{
+    color: aqua;
+    font-size: 40px;
+    position: relative;
+    right: 20px;
+    /*left: 910px; */
+    cursor: pointer;
+    /*position: absolute;*/
+}
+#board{
+    position: relative;
+    bottom: 25px;
+    right: 25px;
+    margin-left: 65px;
+    /*width: 900px;
+    height: 400px;*/
+    background-image: url("https://res.cloudinary.com/dduyxqrqt/image/upload/v1780094276/pasto_qmntww.png");
+    cursor: crosshair;
+} 
