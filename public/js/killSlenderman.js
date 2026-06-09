@@ -2,13 +2,39 @@ window.addEventListener("load", function(){
 /*alert("debes iniciar sesión primero")*/
    let paAtras = document.getElementById('paAtras');
    let again = document.getElementById('again');
+   let muteBtn;
+   let isMuted = false;
+   musica = document.getElementById("musica");
+   muteBtn = document.getElementById("muteBtn");
+   
+   if (musica) {
+        musica.volume = 0.15; 
+    }
+   if(muteBtn){
+   muteBtn.addEventListener("click", toggleMusic);
+   }
 
    paAtras.addEventListener("click", () => {
         window.location.href = "/";
     })
+    if (again) {
     again.addEventListener("click", () => {
-        window.location.href = "/killSlenderman";
-    })
+        resetGame(); // ¡Llamada instantánea sin recargar!
+    });
+}
+function toggleMusic(){
+  if(!musica)return;
+
+  if(isMuted){
+    musica.play();
+    muteBtn.innerHTML = "🔊"; 
+    isMuted = false;
+  }else{
+    musica.pause();
+    muteBtn.innerHTML = "🔇";
+    isMuted = true;
+  }
+ }
 /*ahora empieza lo epico */
 initGame();
 })
@@ -17,6 +43,7 @@ initGame();
 let board;
 let context;
 let puntuacion = document.getElementById('puntuacion');
+let spawnTimer;
 
 /*sonido */
 let disparo = document.getElementById('disparo');
@@ -74,7 +101,7 @@ function spawnEnemy(){
     if(!board)return;
     let size = 130;
     let randomX, randomY;
-    let distanciaSegura = 180;
+    let distanciaSegura = 280;
     let posicionValida = false;
 
     while(!posicionValida){
@@ -93,12 +120,14 @@ function spawnEnemy(){
     /*let randomX = Math.random() * (board.width - size);
     let randomY = Math.random() * (board.height - size); */
 
+    let velocidadDinamica = Math.min(6, 2 + (score * 0.1));
+
     let enemy = {
     x: randomX,
     y: randomY,
     width: size,
     height: size,
-    speed: 7
+    speed: velocidadDinamica
 };
 enemies.push(enemy);
 }
@@ -107,7 +136,7 @@ enemies.push(enemy);
 function initGame(){
     board = document.getElementById("board");
     context = board.getContext("2d");
-    setInterval(spawnEnemy, 2000);
+    //setInterval(spawnEnemy, 2000);
 
 chuck.x = (board.width / 2) - (chuck.width / 2);
 chuck.y = (board.height / 2) - (chuck.height / 2);
@@ -170,6 +199,7 @@ function update(){
         context.fillStyle = "#ad0606";
         context.fillRect(board.width / 2 - 100, board.height / 2 - 25, 200, 50);
 
+
         context.fillStyle = "#ffffff"; // Texto blanco
         context.font = "bold 20px Arial";
         context.textAlign = "center";
@@ -213,6 +243,14 @@ function update(){
 
     updateEnemies();
 }
+function iniciarBucleSpawn(){
+    if(gameOver || !gameStarted)return;
+    spawnEnemy();
+    let tiempoSpawn  = Math.max(400, 2000 - (score * 2));
+
+    spawnTimer = setTimeout(iniciarBucleSpawn, tiempoSpawn);
+}
+
 function shootEnemy(e){
     if(gameOver)return;
     let rect = board.getBoundingClientRect();
@@ -224,7 +262,8 @@ function shootEnemy(e){
             mouseY >= board.height / 2 - 25 && mouseY <= board.height / 2 + 25) {
             
             gameStarted = true;
-            setInterval(spawnEnemy, 2000);
+            //setInterval(spawnEnemy, 2000);
+            iniciarBucleSpawn();
         }
         return;
     }
@@ -256,6 +295,30 @@ function checkCollision(rect1, rect2){
          rect1.y + rect1.height > rect2.y;
 }
 
+
+function resetGame(){
+    if(gameOverSound){
+        gameOverSound.pause();
+        gameOverSound.currentTime = 0;
+    }
+
+    clearTimeout(spawnTimer);
+    enemies = [];
+    score = 0;
+    if(puntuacion){
+        puntuacion.innerHTML = "0";
+    }
+    if(board){
+        chuck.x = (board.width / 2) - (chuck.width / 2);
+        chuck.y = (board.height / 2) - (chuck.height / 2);
+    }
+
+    gameOver = false;
+    playedGameOverSound = false;
+    gameStarted = false;
+
+    iniciarBucleSpawn();
+} 
  
 
 /*function moveChuck(e){

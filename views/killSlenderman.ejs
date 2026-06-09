@@ -8,13 +8,18 @@
      <script src="https://kit.fontawesome.com/8d5432346c.js" crossorigin="anonymous"></script>
     </head> 
 <body class="body">
-     <h1 class="titulo"> Slenderman </h1>   
+     <h1 class="titulo"> Chuck Norris vs Slenderman </h1>   
     <div class="caja"><div class="elementosSuperiores"> 
     <a class="paAtras" id="paAtras"> ← </a>
     <div id="puntuacion"> 0 </div>
     <i class="fa-solid fa-rotate-right again" id="again"></i></div><br>
     <canvas id="board" width="900" height="425"></canvas>
     </div> 
+<!-- ponle controls antes de loop para que se vea el reproductor-->
+<audio id="musica" loop autoplay class="musica">
+        <source src="audios/Dragon Ball Budokai AF - Track 03 [PS2].mp3" type="audio/mp3">
+</audio>
+<button id="muteBtn"> 🔊 </button>
 <audio id="disparo">
 <source src="/audios/mGun3.wav" type="audio/mpeg">
 </audio>
